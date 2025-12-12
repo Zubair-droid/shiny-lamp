@@ -1,0 +1,859 @@
+body{
+  overflow-x: hidden;
+}
+.navbar {
+  font-family: "Inter Tight";
+  font-weight: 600;
+  background-color: inherit;
+  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 6px 1%;
+}
+
+.header {
+  background-color: inherit;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+  padding: 0 1% 0 1%;
+  margin-top: 5%;
+  align-items: center;
+}
+
+.pink-btn {
+  border: 1px solid #ff1b60;
+  outline-color: #ff1b60;
+  border-radius: 22px;
+  color: #ff1b60;
+  /* display: block; */
+  text-decoration: none;
+  margin-right: 12px;
+  margin-left: 12px;
+
+}
+
+.blk-btn {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 22px;
+  outline-color: black;
+}
+
+.creator-btn {
+  text-decoration: none;
+  color:#00000078;
+}
+
+/* Navbar icon collapse CSS */
+
+.navbar-toggler {
+
+  width: 10px;
+  height: 5px;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+/* 2. General style for the 3 lines */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #333;
+  /* Color of the lines */
+  /* border-radius: 1px; */
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  border-radius: 10px;
+  /* High value = fully rounded "capsule" ends */
+}
+
+/* 3. Positioning the 3 lines separately */
+.middle-bar {
+  margin-top: 0px;
+  /* Aligns to center based on button height */
+  top: 10px;
+  /* Approximate center vertically */
+
+}
+
+.top-bar {
+  margin-top: 0px;
+  top: 0px;
+}
+
+.bottom-bar {
+  margin-top: 0px;
+  top: 20px;
+}
+
+/* 4. THE ANIMATION STATE 
+   When Bootstrap adds aria-expanded="true", these styles apply: 
+*/
+
+/* Top line rotates 45 degrees and drops to the center */
+.navbar-toggler[aria-expanded="true"] .top-bar {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+/* Middle line fades out */
+.navbar-toggler[aria-expanded="true"] .middle-bar {
+  opacity: 0;
+  left: -60px;
+  /* Fly out to the left */
+}
+
+/* Bottom line rotates -45 degrees and moves up to the center */
+.navbar-toggler[aria-expanded="true"] .bottom-bar {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+/* When the menu is OPEN (expanded="true"), change the lines to Red */
+/* .navbar-toggler[aria-expanded="true"] .toggler-icon {
+    background: #de737d; }  */
+/* Bootstrap 'Danger' Red */
+
+
+/* First Section */
+
+.first-section {
+  padding-top: 5%;
+}
+
+@media (min-width: 290px) and (max-width:600px) {
+  .first-section {
+    margin-top: 50px;
+  }
+}
+
+.hero-text {
+  font-family: "Inter Tight";
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  background: linear-gradient(103deg, #ff1b60 37.55%, #8f51d6 83.47%, #0477f5 124.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: calc(2rem, 2vw, 2rem);
+}
+
+
+
+
+.support-text {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 3%;
+  font-family: "Inter Tight";
+  color: #6b7280;
+  font-size: clamp(1vw);
+}
+
+
+@media (min-width: 1000px) {
+  .hero-text {
+    width: 55%;
+    margin: auto;
+
+    font-style: 800;
+  }
+
+  .support-text {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+  }
+
+
+
+}
+
+
+@media (max-width: 899px) {
+  .hero-text {
+    width: 100%;
+    margin: auto;
+
+  }
+
+  .support-text {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+    font-family: "Inter Tight";
+    color: #6b7280;
+  }
+
+
+
+}
+
+.video_and_frame_img{
+  width: 60%;
+  height: auto;
+}
+
+.carousel-video-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.categories-list {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-top: 3%;
+  justify-content: center;
+  font-family: "Inter Tight";
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+
+.grey-btn {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.category-icon {
+  width: 18px;
+}
+
+
+
+/* Second section Auto scroll horizontal animation */
+.scroller {
+  max-width: 100%;
+  height: 60%;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  /* -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  ); */
+  /* mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
+
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+
+
+
+/* for testing purposed to ensure the animation lined up correctly */
+.test {
+  background: red !important;
+}
+
+
+
+.carousel-video {
+  /* border-radius: 25px;
+            position: absolute;
+            z-index: 1;
+            
+            height: 510px;
+            margin: auto; */
+
+
+  /* border-radius: 25px;
+            position: absolute;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            width: 310px;
+            margin-left: 50px; */
+
+
+
+  border-radius: 12px;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 304px;
+  height: auto;
+}
+
+.tiktok-frame {
+  /* position: relative;
+            z-index: 2;
+            max-height: auto;
+            width: 270px;
+            height: 510px;
+            resize:both;
+            align-self: center; */
+
+
+  /* background-size: contain;
+            position: relative;
+            z-index: 2;
+            max-width: 280px;
+            margin-left: 50px;
+            padding-left: 20px; */
+
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  width: 296px;
+  height: 545px;
+
+
+}
+
+.carousel-video-item {
+  z-index: 0;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  margin: auto;
+  margin-left: 22px;
+  overflow: visible;
+}
+
+
+/* media-content-tiktok */
+
+
+/* third-section */
+.third-section {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.third-section-hero-text {
+  font-family: "Inter Tight";
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(103deg, #ff1b60 37.55%, #8f51d6 83.47%, #0477f5 124.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: calc(0.5rem, 2vw, 3rem);
+  
+
+}
+
+.ordered-list {
+  font-family: "Inter Tight";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 3%;
+  font-size: smaller;
+  list-style: none;
+  font-weight: bold;
+}
+
+.master-div {
+  width: 80%;
+
+}
+
+.master-card {
+  margin: auto;
+  max-width: fit-content;
+  /* margin-top: 12%; */
+  padding: 5%;
+  border-radius: 36px;
+  box-shadow: 0 8px 30px #13143114;
+  font-family: 'Inter Tight';
+  /* height: 30% inherit; */
+  /* width: 70% inherit; */
+  display: flex;
+  margin-bottom: 6%;
+
+}
+
+.category-canvas {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-items: center;
+  justify-content: flex-end
+}
+
+.category-canvas-item {
+  display: flex;
+  flex-direction: row;
+  margin: 4% 0;
+}
+
+.category-canvas-item>h5 {
+  font-weight: 500;
+  color: #9ca3af;
+  font-size: clamp(1vw, 0.5rem, 1rem);
+}
+
+.carousel-item-main {
+  /* min-width: 238px;
+  min-height: 443px;
+  resize: both;
+  margin: 12px 1%; */
+
+  z-index: 0;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  margin: auto;
+  margin-left: 22px;
+  overflow: visible;
+
+}
+
+#carousel-item-from {
+  color: #ff1b60;
+}
+
+.signup-cta {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  font-family: 'Inter Tight';
+  padding-bottom: 10%;
+}
+
+.sup-btn {
+  background-color: #ff1b60;
+  color: #e5e7eb;
+  border-radius: 40px;
+  padding: 18px;
+  border: none;
+  font-weight: 600;
+}
+
+
+.carousel-section {
+  max-width: 80%;
+  padding: 1%;
+}
+
+.carousel_inner {
+  display: flex;
+}
+
+.tiktok_carousel {
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+
+/* Bottom Grid */
+
+.fourth-section {
+  /* text-align: center; */
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.grid-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  /* Flex container for the columns */
+  justify-content: center;
+  gap: 20px;
+  /* Space between columns */
+
+}
+
+.grid-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* KEY STAGGER EFFECT: Push down even columns */
+.grid-col:nth-child(even) {
+  margin-top: 60px;
+  /* Adjust this value to control the stagger depth */
+}
+
+/* Responsive: Collapse to fewer columns on smaller screens */
+@media (max-width: 1024px) {
+  .grid-col:nth-child(5) {
+    display: none;
+  }
+
+  /* Hide 5th col on tablet */
+}
+
+@media (max-width: 768px) {
+  .grid-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .grid-col {
+    flex: 1 1 45%;
+  }
+
+  /* 2 columns */
+  .grid-col:nth-child(even) {
+    margin-top: 0;
+  }
+
+  /* Remove stagger on mobile for safety */
+  .grid-col:nth-child(2),
+  .grid-col:nth-child(4) {
+    margin-top: 40px;
+  }
+
+  /* Re-add stagger if desired */
+}
+
+@media (max-width: 480px) {
+  .grid-col {
+    flex: 1 1 100%;
+  }
+
+  /* 1 column */
+  .grid-col {
+    margin-top: 0 !important;
+  }
+}
+
+
+
+
+
+
+
+.creator-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/16;
+}
+
+.creator-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+
+.mock-ui-top {
+  position: absolute;
+  display: flex;
+  /* justify-content: space-around; */
+  text-align: center;
+  color: azure;
+  font-size: x-small;
+  width: 100%;
+  line-height: 6px;
+  margin: 4px 12px;
+  z-index: 2;
+}
+
+.top-left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 7px;
+}
+
+.top-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 1px;
+}
+
+.mock-ui-center {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+  margin-top: 18%;
+  color: azure;
+  font-size: x-small;
+  z-index: 2;
+}
+
+.card-overlay-bottom {
+  position: absolute;
+  color: azure;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* margin-bottom: 10px; */
+  border-radius: 25px;
+  z-index: 2;
+}
+
+.card-overlay-bottom p {
+  margin: 0 12px 10px;
+  line-height: 6px;
+  font-size: small;
+  font-weight: lighter;
+}
+
+.music-overlay-text {
+  font-size: x-small;
+
+}
+
+.music-icon-box {
+  padding-right: 5%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 20%);
+  -webkit-text-stroke: 2;
+}
+
+.card-overlay-right {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+
+}
+
+.card-overlay-right p {
+  font-size: small;
+  font-weight: lighter;
+  margin: 0 12px 18px;
+  padding: 6px 0;
+  color: azure;
+  z-index: 2;
+}
+
+.icons-list {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  font-weight: lighter;
+  text-align: end;
+  margin-right: 1px;
+  margin-bottom: 25%;
+}
+
+.right-icon {
+  padding: 4px;
+
+}
+
+.fourth-section-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4% 0;
+  padding-bottom: 2%;
+}
+
+.fourth-section h1 {
+  font-weight: 600;
+}
+
+
+/* Footer section */
+
+.footer-section{
+ 
+  width: 100%;
+  background-color: #f3f4f6;
+  font-family: 'Inter Tight', sans-serif;
+  font-optical-sizing: auto;
+  
+}
+
+
+.footer-wrapper{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  
+ 
+}
+
+.footer-left-portion{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 2%;
+  line-height: 27px;
+}
+
+
+
+footer{
+  padding: 1%;
+  font-weight: bold;
+}
+
+.footer-icons{
+  display: flex;
+  width: 100%;
+  
+}
+
+.footer-imgs{
+  display: flex;
+  flex-direction: column;
+  margin-top: 7%;
+}
+
+.footer-imgs-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.agency-badge{
+  width: 125px;
+  margin-left: 10%;
+}
+
+.footer-imgs img{
+  padding: 4px;
+  /* width: 150px; */
+}
+
+.footer-left-portion h5{
+  font-weight: bold;
+}
+
+
+
+
+
+/* For Mobile responsive */
+
+@media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
+  .fourth-section{
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-wrapper{
+    width: 100%;
+    padding-left: 15px ;
+  }
+
+  .creator-card{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    aspect-ratio: 9 / 16;
+  }
+
+
+  .footer-left-portion{
+    display: flex;
+    flex-direction: column;
+    align-content: normal;
+  }
+
+  .footer-col-4{
+    margin: auto;
+     margin-top: 10%;
+  }
+
+  
+}
+
+@media (max-width: 320px) {
+  .footer-imgs-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+  }
+  
+}
+
+
+@media (min-width: 769px) {
+  .grid-wrapper{
+    max-width: 75%;
+  }
+}
